@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sampahku/ui/booking_page.dart';
+import 'package:sampahku/ui/detail_organic_page.dart';
 
 class FirstPage extends StatelessWidget {
   @override
@@ -90,11 +92,19 @@ class FirstPage extends StatelessWidget {
                           Container(
                             decoration: BoxDecoration(
                             ),
-                            child: Icon(
-                              Icons.double_arrow_sharp,
-                              color: Colors.white,
-                              size: 50,
-                            ),
+                            child: IconButton(
+                                icon: Icon(
+                                  Icons.double_arrow_sharp,
+                                  color: Colors.white,
+                                  size: 50,
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => BookingPage()),
+                                  );
+                                }
+                            )
                           )
                         ],
                       )
@@ -113,48 +123,61 @@ class FirstPage extends StatelessWidget {
                     ),)
               ),
               SizedBox(height: 15,),
-              Container(
-                padding: EdgeInsets.only(left: 10, right: 10, top: 5),
-                height: 100,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                    gradient: LinearGradient(
-                        colors: [
-                          Colors.green,
-                          Colors.greenAccent,
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.centerRight
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DetailOrganicPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)
                     )
                 ),
                 child: Container(
-                  child: Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Apa itu?',
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white
-                            ),),
-                          SizedBox(height: 12,),
-                          Text('Organik?',
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white
-                            ),)
-                        ],
-                      ),
-                      Expanded(child: Container()),
-                      Icon(
-                        Icons.double_arrow_sharp,
-                        color: Colors.white,
+                  padding: EdgeInsets.only(left: 10, right: 10, top: 5),
+                  height: 100,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                      gradient: LinearGradient(
+                          colors: [
+                            Colors.green,
+                            Colors.greenAccent,
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.centerRight
                       )
-                    ],
+                  ),
+                  child: Container(
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Apa itu?',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white
+                              ),),
+                            SizedBox(height: 12,),
+                            Text('Organik?',
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white
+                              ),)
+                          ],
+                        ),
+                        Expanded(child: Container()),
+                        Icon(
+                          Icons.double_arrow_sharp,
+                          color: Colors.white,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
