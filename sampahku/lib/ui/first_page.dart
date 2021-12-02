@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sampahku/ui/booking_page.dart';
+import 'package:sampahku/ui/detail_inorganic_page.dart';
 import 'package:sampahku/ui/detail_organic_page.dart';
+import 'package:sampahku/ui/terms_conditions_page.dart';
 
 class FirstPage extends StatelessWidget {
   @override
@@ -136,7 +138,7 @@ class FirstPage extends StatelessWidget {
                     )
                 ),
                 child: Container(
-                  padding: EdgeInsets.only(left: 10, right: 10, top: 5),
+                  padding: EdgeInsets.only(top: 5),
                   height: 100,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
@@ -156,13 +158,14 @@ class FirstPage extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            SizedBox(height: 8,),
                             Text('Apa itu?',
                               style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w300,
                                   color: Colors.white
                               ),),
-                            SizedBox(height: 12,),
+                            SizedBox(height: 8,),
                             Text('Organik?',
                               style: TextStyle(
                                   fontSize: 25,
@@ -182,94 +185,122 @@ class FirstPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 15,),
-              Container(
-                padding: EdgeInsets.only(left: 10, right: 10, top: 5),
-                height: 100,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.green,
-                      Colors.greenAccent,
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.centerRight
-                  )
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DetailInorganicPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)
+                    )
                 ),
                 child: Container(
-                  child: Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Apa itu?',
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white
-                            ),),
-                          SizedBox(height: 12,),
-                          Text('Anorganik?',
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white
-                            ),)
-                        ],
-                      ),
-                      Expanded(child: Container()),
-                      Icon(
-                        Icons.double_arrow_sharp,
-                        color: Colors.white,
-                      )
-                    ],
+                  padding: EdgeInsets.only(top: 5),
+                  height: 100,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.green,
+                        Colors.greenAccent,
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.centerRight
+                    )
+                  ),
+                  child: Container(
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 8,),
+                            Text('Apa itu?',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white
+                              ),),
+                            SizedBox(height: 8,),
+                            Text('Anorganik?',
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white
+                              ),)
+                          ],
+                        ),
+                        Expanded(child: Container()),
+                        Icon(
+                          Icons.double_arrow_sharp,
+                          color: Colors.white,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
               SizedBox(height: 15,),
-              Container(
-                padding: EdgeInsets.only(left: 10, right: 10, top: 5),
-                height: 100,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
-                    gradient: LinearGradient(
-                        colors: [
-                          Colors.green,
-                          Colors.greenAccent,
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.centerRight
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TermsConditionsPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)
                     )
                 ),
                 child: Container(
-                  child: Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Tata cara pembuangan sampah',
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white
-                            ),),
-                          SizedBox(height: 12,),
-                          Text('Syarat & Ketentuan',
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white
-                            ),)
-                        ],
-                      ),
-                      Expanded(child: Container()),
-                      Icon(
-                        Icons.double_arrow_sharp,
-                        color: Colors.white,
+                  padding: EdgeInsets.only(top: 5),
+                  height: 100,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                      gradient: LinearGradient(
+                          colors: [
+                            Colors.green,
+                            Colors.greenAccent,
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.centerRight
                       )
-                    ],
+                  ),
+                  child: Container(
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 8,),
+                            Text('Tata cara pembuangan sampah',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white
+                              ),),
+                            SizedBox(height: 8,),
+                            Text('Syarat & Ketentuan',
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white
+                              ),)
+                          ],
+                        ),
+                        Expanded(child: Container()),
+                        Icon(
+                          Icons.double_arrow_sharp,
+                          color: Colors.white,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
