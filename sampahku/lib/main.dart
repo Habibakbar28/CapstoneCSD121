@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sampahku/ui/starter_page.dart';
 
 import 'ui/home_page.dart';
 
@@ -16,9 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      initialRoute: HomePage.routeName,
+      initialRoute: StarterPage.routeName,
       routes: {
-        HomePage.routeName: (context) => HomePage()
+        StarterPage.routeName: (context) => StarterPage()
       },
     );
   }
