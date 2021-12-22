@@ -153,8 +153,8 @@ class FirstPage extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                         gradient: LinearGradient(
                             colors: [
-                              Colors.green,
                               Colors.greenAccent,
+                              Colors.green,
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.centerRight
@@ -253,8 +253,8 @@ class FirstPage extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                         gradient: LinearGradient(
                             colors: [
-                              Colors.green,
                               Colors.greenAccent,
+                              Colors.green,
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.centerRight

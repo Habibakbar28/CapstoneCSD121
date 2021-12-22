@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sampahku/ui/home_page.dart';
+import 'package:sampahku/ui/login_page.dart';
 
 class StarterPage extends StatelessWidget {
   static const routeName = '/starter_page';
@@ -47,9 +47,9 @@ class StarterPage extends StatelessWidget {
                   child: MaterialButton(
                     minWidth: double.infinity,
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => LoginPage()),
                       );
                     },
                     child: Text("Start", style: TextStyle(color: Colors.white),),

@@ -84,7 +84,18 @@ class ArticleWebView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('News App'),
+        title: Text('Portal Berita'),
+        elevation: 0,
+        centerTitle: true,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Colors.green, Colors.greenAccent],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight
+              )
+          ),
+        ),
       ),
       body: WebView(
         initialUrl: url,

@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         body: pages[_bottomNavIndex],
         bottomNavigationBar: ConvexAppBar(
-            style: TabStyle.reactCircle,
+            style: TabStyle.textIn,
             gradient: LinearGradient(
               colors: [
                 Colors.green.withOpacity(0.8),
@@ -37,9 +37,9 @@ class _HomePageState extends State<HomePage> {
             ),
             backgroundColor: Colors.green,
             items: [
-              TabItem(icon: Icons.home,),
-              TabItem(icon: Icons.public_rounded),
-              TabItem(icon: Icons.account_circle),
+              TabItem(icon: Icons.home, title: 'Home'),
+              TabItem(icon: Icons.public_rounded, title: 'News'),
+              TabItem(icon: Icons.account_circle, title: 'Account'),
             ],
             initialActiveIndex: 0,
             color: Colors.white,//optional, default as 0
