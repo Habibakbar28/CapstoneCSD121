@@ -2,7 +2,7 @@
     package="com.dicoding.sampahku">
    <application
         android:label="sampahku"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/sampahku">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
